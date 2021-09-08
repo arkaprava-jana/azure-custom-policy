@@ -1,0 +1,25 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "test-redis-1",
+  "policyDefinitionId": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100/providers/Microsoft.Authorization/policySetDefinitions/72c08363e57346c58b2320a8",
+  "scope": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "Arkaprava Jana",
+   "parameterScopes": {},
+   "createdBy": "e4c35d87-48d2-486b-b610-0bd4f53af09e",
+   "createdOn": "2021-09-08T09:23:47.6816255Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100/providers/Microsoft.Authorization/policyAssignments/fa87aa6850d64e4ebc167c7a",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "fa87aa6850d64e4ebc167c7a"
+}

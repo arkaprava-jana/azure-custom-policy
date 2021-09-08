@@ -1,0 +1,26 @@
+{
+ "properties": {
+  "displayName": "test-redis-1",
+  "policyType": "Custom",
+  "metadata": {
+   "createdBy": "e4c35d87-48d2-486b-b610-0bd4f53af09e",
+   "createdOn": "2021-09-08T09:22:32.4253246Z",
+   "updatedBy": "e4c35d87-48d2-486b-b610-0bd4f53af09e",
+   "updatedOn": "2021-09-08T09:23:28.5740146Z",
+   "ASC": "true"
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "testredis_1",
+    "policyDefinitionId": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100/providers/Microsoft.Authorization/policyDefinitions/67730c4c-1a58-4acc-8f35-c934d0c3e816",
+    "parameters": {},
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100/providers/Microsoft.Authorization/policySetDefinitions/72c08363e57346c58b2320a8",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "72c08363e57346c58b2320a8"
+}
