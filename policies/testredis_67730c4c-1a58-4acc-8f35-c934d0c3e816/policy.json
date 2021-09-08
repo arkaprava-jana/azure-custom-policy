@@ -1,0 +1,49 @@
+{
+ "properties": {
+  "displayName": "testredis",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "securityCenter": {
+    "RemediationDescription": "In the Azure Cache for Redis page, under the Monitoring heading, select Diagnostics -> Select + Add diagnostic setting -> Name the setting -> Under the table heading metric, check box beside the line items you want to store, such as AllMetrics -> Check Stream to Event Hub -> Select appropriate eventhub namespace & policy",
+    "Severity": "High"
+   },
+   "createdBy": "e4c35d87-48d2-486b-b610-0bd4f53af09e",
+   "createdOn": "2021-09-07T04:15:28.0330801Z",
+   "updatedBy": "e4c35d87-48d2-486b-b610-0bd4f53af09e",
+   "updatedOn": "2021-09-08T11:00:24.9023437Z"
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "field": "type",
+    "equals": "Microsoft.Cache/Redis"
+   },
+   "then": {
+    "effect": "auditIfNotExists",
+    "details": {
+     "type": "Microsoft.Insights/diagnosticSettings",
+     "existenceCondition": {
+      "allOf": [
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/metrics[*].category",
+        "equals": "AllMetrics"
+       },
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/metrics.enabled",
+        "equals": "True"
+       },
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/eventHubName",
+        "notEquals": "null"
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ "id": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100/providers/Microsoft.Authorization/policyDefinitions/67730c4c-1a58-4acc-8f35-c934d0c3e816",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "67730c4c-1a58-4acc-8f35-c934d0c3e816"
+}

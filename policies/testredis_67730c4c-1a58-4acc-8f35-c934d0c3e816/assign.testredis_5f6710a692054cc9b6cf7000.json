@@ -1,0 +1,26 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "testredis",
+  "policyDefinitionId": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100/providers/Microsoft.Authorization/policyDefinitions/67730c4c-1a58-4acc-8f35-c934d0c3e816",
+  "scope": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100",
+  "notScopes": [],
+  "parameters": {},
+  "description": "",
+  "metadata": {
+   "assignedBy": "Arkaprava Jana",
+   "parameterScopes": {},
+   "createdBy": "e4c35d87-48d2-486b-b610-0bd4f53af09e",
+   "createdOn": "2021-09-07T04:17:39.1114597Z",
+   "updatedBy": "e4c35d87-48d2-486b-b610-0bd4f53af09e",
+   "updatedOn": "2021-09-07T04:28:54.1638975Z"
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/11ec3eb5-6df0-40be-a551-0c4dd619c100/providers/Microsoft.Authorization/policyAssignments/5f6710a692054cc9b6cf7000",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "5f6710a692054cc9b6cf7000"
+}
