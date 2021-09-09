@@ -1,32 +1,42 @@
 {
-  "mode": "All",
-  "policyRule": {
-    "if": {
-      "field": "type",
-      "equals": "Microsoft.Cache/Redis"
+  "properties": {
+    "policyType": "Custom",
+    "mode": "All",
+    "metadata": {
+      "securityCenter": {
+        "RemediationDescription": "In the Azure Cache for Redis page, under the Monitoring heading, select Diagnostics -> Select + Add diagnostic setting -> Name the setting -> Under the table heading metric, check box beside the line items you want to store, such as AllMetrics -> Check Stream to Event Hub -> Select appropriate eventhub namespace & policy",
+        "Severity": "High"
+      }
     },
-    "then": {
-      "effect": "auditIfNotExists",
-      "details": {
-        "type": "Microsoft.Insights/diagnosticSettings",
-        "existenceCondition": {
-          "allOf": [
-            {
-              "field": "Microsoft.Insights/diagnosticSettings/metrics[*].category",
-              "equals": "AllMetrics"
-            },
-            {
-              "field": "Microsoft.Insights/diagnosticSettings/metrics.enabled",
-              "equals": "True"
-            },
-            {
-              "field": "Microsoft.Insights/diagnosticSettings/eventHubName",
-              "contains": "arka"
-            }
-          ]
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.Cache/Redis"
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.Insights/diagnosticSettings",
+          "existenceCondition": {
+            "allOf": [
+              {
+                "field": "Microsoft.Insights/diagnosticSettings/metrics[*].category",
+                "equals": "AllMetrics"
+              },
+              {
+                "field": "Microsoft.Insights/diagnosticSettings/metrics.enabled",
+                "equals": "True"
+              },
+              {
+                "field": "Microsoft.Insights/diagnosticSettings/eventHubName",
+                "contains": "diagnostic-main"
+              }
+            ]
+          }
         }
       }
     }
-  },
-  "parameters": {}
+  }
+  }
 }
